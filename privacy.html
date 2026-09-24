@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Privacy Policy — AUTO MARKETING</title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for AUTO MARKETING."
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
+    >
+
+    <link
+        rel="icon"
+        href="favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="site-header scrolled">
+
+    <div class="container nav-container">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+                AM
+            </span>
+
+            <span class="brand-text">
+                <strong>AUTO</strong>
+                <span>MARKETING</span>
+            </span>
+
+        </a>
+
+        <a
+            href="index.html"
+            class="button button-secondary"
+        >
+            <span data-id="back">
+                Kembali
+            </span>
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section
+    class="section"
+    style="padding-top:150px;"
+>
+
+    <div class="container">
+
+        <span
+            class="section-kicker"
+            id="privacyKicker"
+        >
+            PRIVACY POLICY
+        </span>
+
+        <h1
+            id="privacyTitle"
+            style="
+                color:#f5f5f5;
+                font-size:clamp(38px,6vw,65px);
+                line-height:1.05;
+            "
+        >
+            Kebijakan Privasi
+        </h1>
+
+        <div
+            style="
+                max-width:850px;
+                margin-top:45px;
+                color:#999;
+            "
+            id="privacyContent"
+        >
+
+            <p>
+                AUTO MARKETING menghargai privasi
+                pengunjung dan berkomitmen untuk
+                menangani informasi secara bertanggung
+                jawab.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Informasi yang Kami Terima
+            </h2>
+
+            <p>
+                Informasi dapat diberikan secara sukarela
+                ketika pengunjung menghubungi AUTO
+                MARKETING melalui kanal komunikasi yang
+                tersedia, termasuk WhatsApp.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Penggunaan Informasi
+            </h2>
+
+            <p>
+                Informasi digunakan untuk merespons
+                pertanyaan, memberikan informasi layanan,
+                berkomunikasi dengan calon pelanggan, dan
+                meningkatkan pengalaman layanan.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Pihak Ketiga
+            </h2>
+
+            <p>
+                Website ini dapat menggunakan layanan pihak
+                ketiga yang diperlukan untuk hosting,
+                komunikasi, analitik, atau fungsi bisnis
+                lainnya. Penggunaan data oleh pihak ketiga
+                mengikuti kebijakan masing-masing penyedia.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Keamanan
+            </h2>
+
+            <p>
+                Kami berupaya menggunakan langkah yang wajar
+                untuk melindungi informasi yang diberikan.
+                Namun, tidak ada metode transmisi atau
+                penyimpanan elektronik yang dapat dijamin
+                100% aman.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Perubahan Kebijakan
+            </h2>
+
+            <p>
+                Kebijakan ini dapat diperbarui dari waktu ke
+                waktu untuk menyesuaikan perkembangan layanan,
+                teknologi, atau persyaratan yang berlaku.
+            </p>
+
+        </div>
+
+
+        <div
+            style="
+                display:flex;
+                gap:10px;
+                margin-top:55px;
+            "
+        >
+
+            <button
+                class="button button-secondary"
+                id="privacyLanguage"
+                type="button"
+            >
+                EN
+            </button>
+
+            <a
+                href="index.html"
+                class="button button-primary"
+            >
+                AUTO MARKETING
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="year">2026</span>
+                AUTO MARKETING
+            </span>
+
+            <span>
+                All rights reserved.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+"use strict";
+
+const privacyLanguage =
+    document.getElementById("privacyLanguage");
+
+const privacyKicker =
+    document.getElementById("privacyKicker");
+
+const privacyTitle =
+    document.getElementById("privacyTitle");
+
+const privacyContent =
+    document.getElementById("privacyContent");
+
+let language =
+    localStorage.getItem(
+        "autoMarketingLanguage"
+    ) || "id";
+
+
+const content = {
+
+    id: {
+
+        kicker: "PRIVACY POLICY",
+
+        title: "Kebijakan Privasi",
+
+        button: "EN",
+
+        html: `
+            <p>
+                AUTO MARKETING menghargai privasi
+                pengunjung dan berkomitmen untuk
+                menangani informasi secara bertanggung
+                jawab.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Informasi yang Kami Terima
+            </h2>
+
+            <p>
+                Informasi dapat diberikan secara sukarela
+                ketika pengunjung menghubungi AUTO
+                MARKETING melalui kanal komunikasi yang
+                tersedia, termasuk WhatsApp.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Penggunaan Informasi
+            </h2>
+
+            <p>
+                Informasi digunakan untuk merespons
+                pertanyaan, memberikan informasi layanan,
+                berkomunikasi dengan calon pelanggan, dan
+                meningkatkan pengalaman layanan.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Pihak Ketiga
+            </h2>
+
+            <p>
+                Website ini dapat menggunakan layanan pihak
+                ketiga yang diperlukan untuk hosting,
+                komunikasi, analitik, atau fungsi bisnis
+                lainnya. Penggunaan data oleh pihak ketiga
+                mengikuti kebijakan masing-masing penyedia.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Keamanan
+            </h2>
+
+            <p>
+                Kami berupaya menggunakan langkah yang wajar
+                untuk melindungi informasi yang diberikan.
+                Namun, tidak ada metode transmisi atau
+                penyimpanan elektronik yang dapat dijamin
+                100% aman.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Perubahan Kebijakan
+            </h2>
+
+            <p>
+                Kebijakan ini dapat diperbarui dari waktu ke
+                waktu untuk menyesuaikan perkembangan layanan,
+                teknologi, atau persyaratan yang berlaku.
+            </p>
+        `
+    },
+
+    en: {
+
+        kicker: "PRIVACY POLICY",
+
+        title: "Privacy Policy",
+
+        button: "ID",
+
+        html: `
+            <p>
+                AUTO MARKETING respects visitor privacy
+                and is committed to handling information
+                responsibly.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Information We Receive
+            </h2>
+
+            <p>
+                Information may be voluntarily provided
+                when visitors contact AUTO MARKETING
+                through available communication channels,
+                including WhatsApp.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                How Information Is Used
+            </h2>
+
+            <p>
+                Information may be used to respond to
+                inquiries, provide service information,
+                communicate with prospective customers,
+                and improve the service experience.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Third-Party Services
+            </h2>
+
+            <p>
+                This website may use third-party services
+                required for hosting, communication,
+                analytics, or other business functions.
+                Their handling of information is governed
+                by their respective policies.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Security
+            </h2>
+
+            <p>
+                We take reasonable measures to protect
+                information provided to us. However, no
+                electronic transmission or storage method
+                can be guaranteed to be completely secure.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Policy Changes
+            </h2>
+
+            <p>
+                This policy may be updated from time to time
+                to reflect changes in services, technology,
+                or applicable requirements.
+            </p>
+        `
+    }
+
+};
+
+
+function renderPrivacy() {
+
+    const data =
+        content[language] || content.id;
+
+    document.documentElement.lang =
+        language;
+
+    privacyKicker.textContent =
+        data.kicker;
+
+    privacyTitle.textContent =
+        data.title;
+
+    privacyLanguage.textContent =
+        data.button;
+
+    privacyContent.innerHTML =
+        data.html;
+
+    localStorage.setItem(
+        "autoMarketingLanguage",
+        language
+    );
+}
+
+
+privacyLanguage.addEventListener(
+    "click",
+    () => {
+
+        language =
+            language === "id"
+                ? "en"
+                : "id";
+
+        renderPrivacy();
+
+    }
+);
+
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+renderPrivacy();
+
+</script>
+
+</body>
+</html>

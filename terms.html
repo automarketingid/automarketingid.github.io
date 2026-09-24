@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Terms of Service — AUTO MARKETING</title>
+
+    <meta
+        name="description"
+        content="Terms of Service for AUTO MARKETING."
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
+    >
+
+    <link
+        rel="icon"
+        href="favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="site-header scrolled">
+
+    <div class="container nav-container">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+                AM
+            </span>
+
+            <span class="brand-text">
+                <strong>AUTO</strong>
+                <span>MARKETING</span>
+            </span>
+
+        </a>
+
+        <a
+            href="index.html"
+            class="button button-secondary"
+        >
+            <span id="backText">
+                Kembali
+            </span>
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section
+    class="section"
+    style="padding-top:150px;"
+>
+
+    <div class="container">
+
+        <span
+            class="section-kicker"
+            id="termsKicker"
+        >
+            TERMS OF SERVICE
+        </span>
+
+        <h1
+            id="termsTitle"
+            style="
+                color:#f5f5f5;
+                font-size:clamp(38px,6vw,65px);
+                line-height:1.05;
+            "
+        >
+            Ketentuan Layanan
+        </h1>
+
+        <div
+            id="termsContent"
+            style="
+                max-width:850px;
+                margin-top:45px;
+                color:#999;
+            "
+        >
+
+            <p>
+                Dengan menggunakan website AUTO MARKETING,
+                pengunjung dianggap memahami dan menerima
+                ketentuan umum berikut.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Informasi Website
+            </h2>
+
+            <p>
+                Informasi pada website disediakan untuk
+                memberikan gambaran mengenai layanan dan
+                kemampuan AUTO MARKETING. Informasi dapat
+                berubah sesuai perkembangan layanan.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Layanan Pemasaran
+            </h2>
+
+            <p>
+                Setiap strategi, campaign, advertising,
+                atau layanan pemasaran dapat memiliki
+                persyaratan, biaya, risiko, dan hasil yang
+                berbeda. Tidak ada hasil pemasaran tertentu
+                yang dijamin secara otomatis.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Pihak Ketiga
+            </h2>
+
+            <p>
+                Beberapa layanan dapat bergantung pada
+                platform pihak ketiga seperti mesin pencari,
+                media sosial, layanan komunikasi, atau
+                platform advertising. Perubahan kebijakan
+                atau sistem pihak ketiga dapat memengaruhi
+                layanan.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Penggunaan yang Bertanggung Jawab
+            </h2>
+
+            <p>
+                Pengguna tidak diperkenankan menggunakan
+                layanan untuk aktivitas ilegal, penipuan,
+                penyalahgunaan platform, spam, atau aktivitas
+                lain yang melanggar hukum dan kebijakan
+                platform terkait.
+            </p>
+
+            <h2
+                style="color:#f5f5f5;margin-top:40px;"
+            >
+                Perubahan Ketentuan
+            </h2>
+
+            <p>
+                AUTO MARKETING dapat memperbarui ketentuan
+                ini apabila diperlukan untuk menyesuaikan
+                layanan, teknologi, atau persyaratan yang
+                berlaku.
+            </p>
+
+        </div>
+
+
+        <div
+            style="
+                display:flex;
+                gap:10px;
+                margin-top:55px;
+            "
+        >
+
+            <button
+                class="button button-secondary"
+                id="termsLanguage"
+                type="button"
+            >
+                EN
+            </button>
+
+            <a
+                href="index.html"
+                class="button button-primary"
+            >
+                AUTO MARKETING
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="year">2026</span>
+                AUTO MARKETING
+            </span>
+
+            <span>
+                All rights reserved.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+"use strict";
+
+const termsLanguage =
+    document.getElementById("termsLanguage");
+
+const termsKicker =
+    document.getElementById("termsKicker");
+
+const termsTitle =
+    document.getElementById("termsTitle");
+
+const termsContent =
+    document.getElementById("termsContent");
+
+let language =
+    localStorage.getItem(
+        "autoMarketingLanguage"
+    ) || "id";
+
+
+const content = {
+
+    id: {
+
+        kicker: "TERMS OF SERVICE",
+
+        title: "Ketentuan Layanan",
+
+        button: "EN",
+
+        html: `
+            <p>
+                Dengan menggunakan website AUTO MARKETING,
+                pengunjung dianggap memahami dan menerima
+                ketentuan umum berikut.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Informasi Website
+            </h2>
+
+            <p>
+                Informasi pada website disediakan untuk
+                memberikan gambaran mengenai layanan dan
+                kemampuan AUTO MARKETING. Informasi dapat
+                berubah sesuai perkembangan layanan.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Layanan Pemasaran
+            </h2>
+
+            <p>
+                Setiap strategi, campaign, advertising,
+                atau layanan pemasaran dapat memiliki
+                persyaratan, biaya, risiko, dan hasil yang
+                berbeda. Tidak ada hasil pemasaran tertentu
+                yang dijamin secara otomatis.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Pihak Ketiga
+            </h2>
+
+            <p>
+                Beberapa layanan dapat bergantung pada
+                platform pihak ketiga seperti mesin pencari,
+                media sosial, layanan komunikasi, atau
+                platform advertising. Perubahan kebijakan
+                atau sistem pihak ketiga dapat memengaruhi
+                layanan.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Penggunaan yang Bertanggung Jawab
+            </h2>
+
+            <p>
+                Pengguna tidak diperkenankan menggunakan
+                layanan untuk aktivitas ilegal, penipuan,
+                penyalahgunaan platform, spam, atau aktivitas
+                lain yang melanggar hukum dan kebijakan
+                platform terkait.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Perubahan Ketentuan
+            </h2>
+
+            <p>
+                AUTO MARKETING dapat memperbarui ketentuan
+                ini apabila diperlukan untuk menyesuaikan
+                layanan, teknologi, atau persyaratan yang
+                berlaku.
+            </p>
+        `
+    },
+
+    en: {
+
+        kicker: "TERMS OF SERVICE",
+
+        title: "Terms of Service",
+
+        button: "ID",
+
+        html: `
+            <p>
+                By using the AUTO MARKETING website,
+                visitors acknowledge and accept the
+                following general terms.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Website Information
+            </h2>
+
+            <p>
+                Information on this website is provided
+                to describe AUTO MARKETING services and
+                capabilities. Information may change as
+                our services evolve.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Marketing Services
+            </h2>
+
+            <p>
+                Each marketing strategy, campaign,
+                advertising activity, or service may have
+                different requirements, costs, risks, and
+                outcomes. Specific marketing results are
+                not automatically guaranteed.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Third-Party Platforms
+            </h2>
+
+            <p>
+                Some services may depend on third-party
+                platforms such as search engines, social
+                networks, communication services, or
+                advertising platforms. Changes to third-party
+                policies or systems may affect service
+                availability or performance.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Responsible Use
+            </h2>
+
+            <p>
+                Users must not use our services for illegal
+                activities, fraud, platform abuse, spam, or
+                any activity that violates applicable law or
+                the policies of relevant platforms.
+            </p>
+
+            <h2 style="color:#f5f5f5;margin-top:40px;">
+                Changes to These Terms
+            </h2>
+
+            <p>
+                AUTO MARKETING may update these terms when
+                necessary to reflect changes in services,
+                technology, or applicable requirements.
+            </p>
+        `
+    }
+
+};
+
+
+function renderTerms() {
+
+    const data =
+        content[language] || content.id;
+
+    document.documentElement.lang =
+        language;
+
+    termsKicker.textContent =
+        data.kicker;
+
+    termsTitle.textContent =
+        data.title;
+
+    termsLanguage.textContent =
+        data.button;
+
+    termsContent.innerHTML =
+        data.html;
+
+    localStorage.setItem(
+        "autoMarketingLanguage",
+        language
+    );
+}
+
+
+termsLanguage.addEventListener(
+    "click",
+    () => {
+
+        language =
+            language === "id"
+                ? "en"
+                : "id";
+
+        renderTerms();
+
+    }
+);
+
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+renderTerms();
+
+</script>
+
+</body>
+</html>
