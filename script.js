@@ -55,7 +55,7 @@
    */
 
   const INTAKE_ENDPOINT =
-    "http://127.0.0.1:8090/api/v1/web-am/intake";
+  "https://automarketingcentral-uzu8kgzh.b4a.run/api/v1/web-am/intake";
 
   /*
    * Halaman internal Web AM.
