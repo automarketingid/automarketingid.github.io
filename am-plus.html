@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description" content="AM+ adalah sistem operasional di belakang AUTO MARKETING.">
+
+<title>AM+ — Sistem Operasional AUTO MARKETING</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.product-hero{
+  padding:100px 0 70px;
+}
+
+.product-hero h1{
+  font-size:clamp(42px,7vw,72px);
+  line-height:1.05;
+  margin:15px 0;
+}
+
+.product-hero h1 span{
+  display:inline-block;
+}
+
+.product-hero p{
+  max-width:780px;
+  color:#aaa;
+  font-size:18px;
+  line-height:1.7;
+}
+
+.module{
+  border:1px solid #292929;
+  background:#101010;
+  padding:28px;
+}
+
+.module b{
+  color:#d4af37;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.module h3{
+  margin:12px 0 7px;
+}
+
+.module p{
+  color:#999;
+  line-height:1.7;
+}
+
+.catalog{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.back{
+  display:inline-block;
+  color:#d4af37;
+  text-decoration:none;
+  margin-top:30px;
+}
+
+.back:hover{
+  text-decoration:underline;
+}
+
+@media(max-width:800px){
+
+  .product-hero{
+    padding:80px 0 55px;
+  }
+
+  .catalog{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:560px){
+
+  .product-hero{
+    padding:70px 0 45px;
+  }
+
+  .product-hero p{
+    font-size:16px;
+  }
+
+  .catalog{
+    grid-template-columns:1fr;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header" id="siteHeader">
+
+  <div class="container nav-wrap">
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="AUTO MARKETING">
+
+      <span class="brand-mark">AM</span>
+
+      <span>
+        <strong>AUTO</strong>
+        <small>MARKETING</small>
+      </span>
+
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Buka menu"
+      aria-expanded="false"
+      aria-controls="mainNav">
+      ☰
+    </button>
+
+    <nav class="nav" id="mainNav">
+
+      <a href="index.html">
+        Web AM
+      </a>
+
+      <a href="#fungsi">
+        Fungsi
+      </a>
+
+      <a href="#alur">
+        Alur
+      </a>
+
+      <a href="#produk">
+        Produk
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+  <!-- HERO -->
+  <section class="product-hero">
+
+    <div class="container reveal">
+
+      <span class="eyebrow">
+        AUTO MARKETING PRODUCT
+      </span>
+
+      <h1>
+        AM+
+        <br>
+        <span>Sistem di belakang AUTO MARKETING.</span>
+      </h1>
+
+      <p>
+        Web AM adalah pintu masuk yang sedang Anda baca.
+        AM+ berbeda: AM+ adalah aplikasi/sistem operasional
+        yang digunakan untuk mengelola pekerjaan marketing
+        setelah kebutuhan bisnis masuk ke proses kerja.
+      </p>
+
+      <a
+        class="button primary"
+        href="index.html#form">
+        Ceritakan Bisnis Anda
+      </a>
+
+      <a
+        class="back"
+        href="index.html">
+        ← Kembali ke Web AM
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FUNGSI -->
+  <section
+    class="section"
+    id="fungsi">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="eyebrow">
+          KENAPA AM+ ADA?
+        </span>
+
+        <h2>
+          Marketing membutuhkan tempat untuk
+          mengelola pekerjaan, bukan hanya tempat
+          untuk menampilkan informasi.
+        </h2>
+
+        <p>
+          Website bagus untuk menjelaskan sesuatu
+          kepada publik. Tetapi ketika sebuah bisnis
+          mulai masuk ke proses kerja marketing,
+          dibutuhkan sistem yang dapat menyimpan
+          dan menghubungkan informasi client,
+          produk atau jasa, campaign, advertising,
+          tracking, calon pelanggan, sampai hasil transaksi.
+        </p>
+
+      </div>
+
+
+      <div class="two-col">
+
+        <article class="text-card reveal">
+
+          <h3>
+            Web AM
+          </h3>
+
+          <p>
+            Tempat publik. Orang datang, membaca,
+            memahami, bertanya, dan mengirimkan
+            informasi awal.
+          </p>
+
+        </article>
+
+
+        <article class="text-card reveal">
+
+          <h3>
+            AM+
+          </h3>
+
+          <p>
+            Tempat operasional. Data dan aktivitas
+            marketing dikelola mengikuti alur kerja
+            yang sudah ditentukan.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ALUR -->
+  <section
+    class="section dark-section"
+    id="alur">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="eyebrow">
+          ALUR OPERASIONAL
+        </span>
+
+        <h2>
+          Data marketing tidak berdiri sendiri.
+        </h2>
+
+        <p>
+          AM+ dirancang mengikuti hubungan
+          antarbagian sehingga pekerjaan tidak hanya
+          berupa kumpulan catatan yang terpisah.
+        </p>
+
+      </div>
+
+
+      <div class="catalog">
+
+        <div class="module reveal">
+          <b>01</b>
+          <h3>Client</h3>
+          <p>
+            Data pihak yang menggunakan atau
+            membutuhkan pekerjaan marketing.
+          </p>
+        </div>
+
+
+        <div class="module reveal">
+          <b>02</b>
+          <h3>Product / Service</h3>
+          <p>
+            Apa yang dimiliki client dan ingin dipasarkan.
+          </p>
+        </div>
+
+
+        <div class="module reveal">
+          <b>03</b>
+          <h3>Campaign</h3>
+          <p>
+            Kegiatan pemasaran yang memiliki tujuan
+            dan ruang lingkup tertentu.
+          </p>
+        </div>
+
+
+        <div class="module reveal">
+          <b>04</b>
+          <h3>Advertising</h3>
+          <p>
+            Pengelolaan aktivitas iklan ketika
+            advertising memang diperlukan.
+          </p>
+        </div>
+
+
+        <div class="module reveal">
+          <b>05</b>
+          <h3>Tracking</h3>
+          <p>
+            Mencatat sumber dan perjalanan respons
+            agar asal calon pelanggan dapat ditinjau.
+          </p>
+        </div>
+
+
+        <div class="module reveal">
+          <b>06</b>
+          <h3>Lead</h3>
+          <p>
+            Calon pelanggan yang muncul dari
+            aktivitas pemasaran.
+          </p>
+        </div>
+
+
+        <div class="module reveal">
+          <b>07</b>
+          <h3>Order / Deal</h3>
+          <p>
+            Hasil bisnis yang benar-benar terjadi,
+            terpisah dari sekadar harga referensi produk.
+          </p>
+        </div>
+
+
+        <div class="module reveal">
+          <b>08</b>
+          <h3>Marketing Fee</h3>
+          <p>
+            Pencatatan fee marketing berdasarkan
+            model yang ditentukan, bukan otomatis
+            dari harga produk.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DATA TERHUBUNG -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="eyebrow">
+          KENAPA DATA HARUS TERHUBUNG?
+        </span>
+
+        <h2>
+          Supaya client yang berbeda tidak tercampur.
+        </h2>
+
+        <p>
+          AUTO MARKETING dapat menangani banyak
+          client dan banyak produk atau jasa.
+          Karena itu setiap data perlu memiliki
+          hubungan yang jelas.
+        </p>
+
+      </div>
+
+
+      <div class="text-card reveal">
+
+        <p>
+          Produk client A tidak boleh dianggap milik
+          client B. Campaign dan tracking juga harus
+          dapat ditelusuri kembali ke konteks yang benar.
+        </p>
+
+        <p>
+          Contohnya sederhana: sebuah iklan menghasilkan
+          respons. AM+ perlu mengetahui iklan tersebut
+          milik campaign mana, campaign tersebut untuk
+          client mana, produk atau jasa apa yang dipasarkan,
+          dan dari mana respons tersebut datang.
+        </p>
+
+        <p>
+          Dengan hubungan data seperti itu, hasil marketing
+          dapat ditinjau dengan konteks yang benar.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUK -->
+  <section class="section soft-section" id="produk">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <span class="eyebrow">
+        SISTEM AUTO MARKETING
+      </span>
+
+      <h2>
+        Setelah pemasaran dimulai, pekerjaan perlu dikelola dengan jelas.
+      </h2>
+
+      <p>
+        AM+ membantu AUTO MARKETING mengelola proses pemasaran secara lebih
+        teratur, mulai dari memahami kebutuhan bisnis, menentukan apa yang
+        akan dipasarkan, menjalankan kegiatan pemasaran, mencatat calon
+        pelanggan, hingga melihat hasil yang diperoleh.
+      </p>
+
+    </div>
+
+
+    <div class="catalog">
+
+      <div class="module reveal">
+
+        <b>AM+</b>
+
+        <h3>
+          Pengelolaan Marketing
+        </h3>
+
+        <p>
+          Sistem yang membantu kami mengelola pekerjaan pemasaran Anda
+          agar setiap proses dan hasilnya dapat dicatat serta ditelusuri
+          dengan jelas.
+        </p>
+
+      </div>
+
+
+      <div class="module reveal">
+
+        <b>UNTUK BISNIS</b>
+
+        <h3>
+          Lebih Terarah
+        </h3>
+
+        <p>
+          Informasi tentang bisnis, produk atau jasa, kegiatan pemasaran,
+          calon pelanggan, dan hasilnya dapat dikelola dalam satu alur
+          yang saling berhubungan.
+        </p>
+
+      </div>
+
+
+      <div class="module reveal">
+
+        <b>BERKEMBANG</b>
+
+        <h3>
+          Dibangun untuk Kebutuhan Nyata
+        </h3>
+
+        <p>
+          Sistem ini dikembangkan untuk mendukung pekerjaan AUTO MARKETING
+          dalam menangani berbagai kebutuhan bisnis dan jenis produk atau
+          jasa.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <a
+      class="back"
+      href="index.html">
+      ← Kembali ke Web AM
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+  <div class="container footer-bottom">
+
+    ©
+    <span id="year"></span>
+    AUTO MARKETING
+
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+"use strict";
+
+document.documentElement.classList.add("js");
+
+
+/* =========================
+   ELEMENT
+========================= */
+
+const year =
+  document.getElementById("year");
+
+const menuToggle =
+  document.getElementById("menuToggle");
+
+const mainNav =
+  document.getElementById("mainNav");
+
+const siteHeader =
+  document.getElementById("siteHeader");
+
+
+/* =========================
+   YEAR
+========================= */
+
+if (year) {
+  year.textContent =
+    new Date().getFullYear();
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+if (menuToggle && mainNav) {
+
+  menuToggle.addEventListener(
+    "click",
+    function () {
+
+      const isOpen =
+        mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Tutup menu"
+          : "Buka menu"
+      );
+
+    }
+  );
+
+
+  /* MENU LINK */
+
+  mainNav
+    .querySelectorAll("a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          mainNav.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Buka menu"
+          );
+
+        }
+      );
+
+    });
+
+
+  /* CLICK OUTSIDE */
+
+  document.addEventListener(
+    "click",
+    function (event) {
+
+      if (
+        mainNav.classList.contains("open") &&
+        !mainNav.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+
+        mainNav.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Buka menu"
+        );
+
+      }
+
+    }
+  );
+
+
+  /* ESC */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Escape") {
+
+        mainNav.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Buka menu"
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+const els =
+  document.querySelectorAll(".reveal");
+
+
+if ("IntersectionObserver" in window) {
+
+  const observer =
+    new IntersectionObserver(
+      function (entries) {
+
+        entries.forEach(
+          function (entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold: 0.08
+      }
+    );
+
+
+  els.forEach(
+    function (el) {
+      observer.observe(el);
+    }
+  );
+
+
+} else {
+
+  els.forEach(
+  function (el) {
+    el.classList.add("visible");
+  }
+);
+
+}
+</script>
+
+<script src="translations.js"></script>
+<script src="language.js"></script>
+</body>
+</html>

@@ -1,581 +1,1004 @@
-"use strict";
-
-/*
- * AUTO MARKETING
- * Bilingual Website Controller
- *
- * Default language : Indonesian
- * Secondary language: English
- */
-
-const translations = {
-
-    id: {
-
-        "nav.home": "Beranda",
-        "nav.services": "Layanan",
-        "nav.process": "Cara Kerja",
-        "nav.about": "Tentang",
-        "nav.contact": "Kontak",
-        "nav.cta": "Konsultasi",
-
-        "hero.eyebrow": "Solusi Pemasaran Digital",
-
-        "hero.title": "Bangun Kehadiran Digital. <span>Tumbuhkan Bisnis Anda.</span>",
-
-        "hero.description":
-            "Solusi pemasaran digital yang membantu bisnis menjangkau lebih banyak pelanggan, membangun kepercayaan, dan berkembang dengan strategi yang terukur.",
-
-        "hero.primary": "Mulai Konsultasi",
-        "hero.secondary": "Jelajahi Layanan",
-
-        "hero.trust1": "Strategi",
-        "hero.trust2": "Eksekusi",
-        "hero.trust3": "Pertumbuhan",
-
-        "dashboard.label": "MARKETING OVERVIEW",
-        "dashboard.title": "Digital Growth",
-        "dashboard.growth": "potensi pertumbuhan",
-        "dashboard.reach": "Jangkauan Digital",
-
-        "float.strategy": "Strategi Siap",
-        "float.optimized": "Kampanye dioptimalkan",
-        "float.marketing": "Pemasaran",
-
-        "services.kicker": "LAYANAN",
-
-        "services.title":
-            "Satu Strategi. <span>Berbagai Kanal.</span>",
-
-        "services.description":
-            "Kami membantu bisnis membangun fondasi pemasaran digital yang kuat dan terhubung.",
-
-        "service.digital.title":
-            "Pemasaran Digital",
-
-        "service.digital.text":
-            "Strategi digital untuk memperkuat kehadiran bisnis dan menjangkau audiens yang tepat.",
-
-        "service.campaign.title":
-            "Manajemen Kampanye",
-
-        "service.campaign.text":
-            "Perencanaan, pengelolaan, dan optimasi kampanye pemasaran berdasarkan tujuan bisnis.",
-
-        "service.google.title":
-            "Google & Local Presence",
-
-        "service.google.text":
-            "Membantu bisnis membangun kehadiran profesional di Google dan pencarian lokal.",
-
-        "service.social.title":
-            "Social Media Marketing",
-
-        "service.social.text":
-            "Strategi konten dan komunikasi untuk membangun hubungan dengan audiens.",
-
-        "service.ads.title":
-            "Advertising Management",
-
-        "service.ads.text":
-            "Pengelolaan kampanye iklan digital ketika bisnis siap menggunakan paid advertising.",
-
-        "service.analytics.title":
-            "Marketing Analytics",
-
-        "service.analytics.text":
-            "Tracking dan insight untuk memahami performa aktivitas pemasaran.",
-
-        "service.learn": "Pelajari",
-
-        "statement.title":
-            "Marketing bukan hanya tentang terlihat. Ini tentang ditemukan, dipercaya, dan dipilih.",
-
-        "statement.text":
-            "AUTO MARKETING membantu menghubungkan strategi, kanal, konten, dan data menjadi sistem pemasaran yang lebih terarah.",
-
-        "process.kicker": "CARA KERJA",
-
-        "process.title":
-            "Dari Strategi <span>Menuju Pertumbuhan.</span>",
-
-        "process.description":
-            "Proses sederhana, terstruktur, dan berorientasi pada tujuan bisnis.",
-
-        "process.one.title": "Discover",
-
-        "process.one.text":
-            "Memahami bisnis, target pelanggan, kebutuhan, dan tujuan pemasaran.",
-
-        "process.two.title": "Strategize",
-
-        "process.two.text":
-            "Menentukan kanal, pesan, konten, dan pendekatan yang relevan.",
-
-        "process.three.title": "Execute",
-
-        "process.three.text":
-            "Menjalankan aktivitas pemasaran secara konsisten dan terarah.",
-
-        "process.four.title": "Measure",
-
-        "process.four.text":
-            "Mengukur aktivitas dan menggunakan data untuk menentukan langkah berikutnya.",
-
-        "about.panel.kicker": "AUTO MARKETING",
-        "about.panel.area": "Indonesia",
-        "about.panel.status": "Local-first. Global-ready.",
-
-        "about.kicker": "TENTANG KAMI",
-
-        "about.title":
-            "Dibangun untuk bisnis yang ingin tumbuh secara digital.",
-
-        "about.text1":
-            "AUTO MARKETING adalah platform dan layanan pemasaran digital yang dirancang untuk membantu bisnis membangun kehadiran online yang lebih profesional.",
-
-        "about.text2":
-            "Kami memulai dari Indonesia dengan visi membangun solusi pemasaran yang dapat berkembang bersama bisnis dan menjangkau pasar internasional.",
-
-        "about.point1": "Berfokus pada Indonesia",
-        "about.point2": "Berbasis data",
-        "about.point3": "Siap global",
-
-        "presence.kicker": "LOCAL DIGITAL PRESENCE",
-
-        "presence.title":
-            "Berbasis di Indonesia. Siap berkembang secara global.",
-
-        "presence.text":
-            "Kami membangun fondasi digital dengan memahami pasar lokal terlebih dahulu, kemudian menyiapkannya untuk pertumbuhan yang lebih luas.",
-
-        "contact.kicker": "HUBUNGI KAMI",
-
-        "contact.title":
-            "Siap memasarkan <span>lebih cerdas?</span>",
-
-        "contact.text":
-            "Ceritakan bisnis dan kebutuhan pemasaran Anda. Mari mulai dari strategi yang tepat.",
-
-        "contact.button":
-            "Hubungi via WhatsApp",
-
-        "contact.channel": "CHANNEL",
-        "contact.phone": "PHONE",
-        "contact.area": "SERVICE AREA",
-        "contact.language": "LANGUAGE",
-        "contact.indonesia": "Indonesia",
-
-        "footer.description":
-            "Solusi pemasaran digital untuk bisnis yang ingin tumbuh.",
-
-        "footer.privacy": "Privasi",
-        "footer.terms": "Ketentuan",
-        "footer.rights": "All rights reserved."
-    },
-
-
-    en: {
-
-        "nav.home": "Home",
-        "nav.services": "Services",
-        "nav.process": "How It Works",
-        "nav.about": "About",
-        "nav.contact": "Contact",
-        "nav.cta": "Consultation",
-
-        "hero.eyebrow": "Digital Marketing Solutions",
-
-        "hero.title":
-            "Build Your Digital Presence. <span>Grow Your Business.</span>",
-
-        "hero.description":
-            "Digital marketing solutions designed to help businesses reach more customers, build trust, and grow through measurable strategies.",
-
-        "hero.primary": "Start a Consultation",
-        "hero.secondary": "Explore Services",
-
-        "hero.trust1": "Strategy",
-        "hero.trust2": "Execution",
-        "hero.trust3": "Growth",
-
-        "dashboard.label": "MARKETING OVERVIEW",
-        "dashboard.title": "Digital Growth",
-        "dashboard.growth": "growth potential",
-        "dashboard.reach": "Digital Reach",
-
-        "float.strategy": "Strategy Ready",
-        "float.optimized": "Campaign optimized",
-        "float.marketing": "Marketing",
-
-        "services.kicker": "SERVICES",
-
-        "services.title":
-            "One Strategy. <span>Multiple Channels.</span>",
-
-        "services.description":
-            "We help businesses build a strong and connected digital marketing foundation.",
-
-        "service.digital.title":
-            "Digital Marketing",
-
-        "service.digital.text":
-            "Digital strategies designed to strengthen your business presence and reach the right audience.",
-
-        "service.campaign.title":
-            "Campaign Management",
-
-        "service.campaign.text":
-            "Planning, managing, and optimizing marketing campaigns around your business objectives.",
-
-        "service.google.title":
-            "Google & Local Presence",
-
-        "service.google.text":
-            "Helping businesses establish a professional presence on Google and local search.",
-
-        "service.social.title":
-            "Social Media Marketing",
-
-        "service.social.text":
-            "Content and communication strategies designed to build meaningful audience relationships.",
-
-        "service.ads.title":
-            "Advertising Management",
-
-        "service.ads.text":
-            "Digital advertising campaign management when your business is ready for paid advertising.",
-
-        "service.analytics.title":
-            "Marketing Analytics",
-
-        "service.analytics.text":
-            "Tracking and insights to understand marketing performance and support better decisions.",
-
-        "service.learn": "Learn More",
-
-        "statement.title":
-            "Marketing is not only about being seen. It is about being discovered, trusted, and chosen.",
-
-        "statement.text":
-            "AUTO MARKETING connects strategy, channels, content, and data into a more focused marketing system.",
-
-        "process.kicker": "HOW IT WORKS",
-
-        "process.title":
-            "From Strategy <span>to Growth.</span>",
-
-        "process.description":
-            "A simple, structured process built around business objectives.",
-
-        "process.one.title": "Discover",
-
-        "process.one.text":
-            "Understand the business, target customers, needs, and marketing objectives.",
-
-        "process.two.title": "Strategize",
-
-        "process.two.text":
-            "Define the right channels, messages, content, and marketing approach.",
-
-        "process.three.title": "Execute",
-
-        "process.three.text":
-            "Execute marketing activities consistently and with clear direction.",
-
-        "process.four.title": "Measure",
-
-        "process.four.text":
-            "Measure activity and use data to determine the next strategic step.",
-
-        "about.panel.kicker": "AUTO MARKETING",
-        "about.panel.area": "Indonesia",
-        "about.panel.status": "Local-first. Global-ready.",
-
-        "about.kicker": "ABOUT US",
-
-        "about.title":
-            "Built for businesses ready to grow digitally.",
-
-        "about.text1":
-            "AUTO MARKETING is a digital marketing platform and service designed to help businesses build a more professional online presence.",
-
-        "about.text2":
-            "We are starting from Indonesia with a vision to build marketing solutions that grow with businesses and eventually reach international markets.",
-
-        "about.point1": "Indonesia-focused",
-        "about.point2": "Data-aware",
-        "about.point3": "Global-ready",
-
-        "presence.kicker": "LOCAL DIGITAL PRESENCE",
-
-        "presence.title":
-            "Based in Indonesia. Ready for global growth.",
-
-        "presence.text":
-            "We build digital foundations by understanding the local market first, then preparing them for broader growth.",
-
-        "contact.kicker": "CONTACT US",
-
-        "contact.title":
-            "Ready to Market <span>Smarter?</span>",
-
-        "contact.text":
-            "Tell us about your business and marketing needs. Let's start with the right strategy.",
-
-        "contact.button":
-            "Contact via WhatsApp",
-
-        "contact.channel": "CHANNEL",
-        "contact.phone": "PHONE",
-        "contact.area": "SERVICE AREA",
-        "contact.language": "LANGUAGE",
-        "contact.indonesia": "Indonesia",
-
-        "footer.description":
-            "Digital marketing solutions for businesses ready to grow.",
-
-        "footer.privacy": "Privacy",
-        "footer.terms": "Terms",
-        "footer.rights": "All rights reserved."
-    }
-
-};
-
-
-const htmlElement = document.documentElement;
-const languageToggle = document.getElementById("languageToggle");
-const languageLabel = document.getElementById("languageLabel");
-
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-const siteHeader = document.getElementById("siteHeader");
-
-const currentYear = document.getElementById("currentYear");
-
-
-/*
- * Apply selected language
- */
-function applyLanguage(language) {
-
-    const dictionary =
-        translations[language] || translations.id;
-
-    htmlElement.lang = language;
-
-    document
-        .querySelectorAll("[data-i18n]")
-        .forEach(element => {
-
-            const key =
-                element.getAttribute("data-i18n");
-
-            if (!dictionary[key]) {
-                return;
-            }
-
-            element.innerHTML = dictionary[key];
-        });
-
-    /*
-     * Button shows the language that can be selected next.
-     */
-    languageLabel.textContent =
-        language === "id"
-            ? "EN"
-            : "ID";
-
-    localStorage.setItem(
-        "autoMarketingLanguage",
-        language
+(() => {
+  "use strict";
+
+  /*
+   * AUTO MARKETING
+   * Web AM Public Controller
+   *
+   * Fungsi:
+   * 1. Mobile navigation
+   * 2. Internal section navigation
+   * 3. Active navigation state
+   * 4. Safe local-page navigation
+   * 5. Reveal animation
+   * 6. Current year
+   * 7. Intake form validation
+   * 8. Central Backend intake handler
+   * 9. Visible error/status handling
+   */
+
+  document.documentElement.classList.add("js");
+
+  /* =========================================
+     ELEMENTS
+  ========================================= */
+
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  const year = document.getElementById("year");
+
+  const form = document.getElementById("intakeForm");
+  const formStatus = document.getElementById("formStatus");
+
+  /* =========================================
+     CONFIG
+  ========================================= */
+
+  /*
+   * CENTRAL BACKEND
+   *
+   * Endpoint resmi Web AM Intake:
+   *
+   * POST /api/v1/web-am/intake
+   *
+   * Untuk TEST LOKAL:
+   *
+   * http://127.0.0.1:8090/api/v1/web-am/intake
+   *
+   * PENTING:
+   * URL 127.0.0.1 hanya untuk pengujian dari
+   * perangkat yang menjalankan Central Backend.
+   *
+   * Untuk production GitHub Pages, URL ini harus
+   * diganti dengan domain HTTPS Central Backend
+   * yang dapat diakses publik.
+   */
+
+  const INTAKE_ENDPOINT =
+    "http://127.0.0.1:8090/api/v1/web-am/intake";
+
+  /*
+   * Halaman internal Web AM.
+   *
+   * Kalau file belum tersedia, sistem akan memberi
+   * pesan "Updating sistem..." daripada membawa
+   * user ke halaman error.
+   */
+
+  const LOCAL_PAGES = [
+    "am-plus.html"
+  ];
+
+  /* =========================================
+     YEAR
+  ========================================= */
+
+  if (year) {
+    year.textContent = String(
+      new Date().getFullYear()
     );
+  }
 
-    document.title =
-        language === "id"
-            ? "AUTO MARKETING — Digital Marketing & Growth Solutions"
-            : "AUTO MARKETING — Digital Marketing & Growth Solutions";
-}
+  /* =========================================
+     MOBILE MENU
+  ========================================= */
 
-
-/*
- * Detect saved language.
- *
- * Indonesian is always the default.
- */
-function getInitialLanguage() {
-
-    const saved =
-        localStorage.getItem(
-            "autoMarketingLanguage"
-        );
-
-    if (saved === "id" || saved === "en") {
-        return saved;
+  function openMenu() {
+    if (!mainNav || !menuToggle) {
+      return;
     }
 
-    return "id";
-}
-
-
-/*
- * Language switch
- */
-languageToggle.addEventListener(
-    "click",
-    () => {
-
-        const current =
-            htmlElement.lang === "en"
-                ? "en"
-                : "id";
-
-        const next =
-            current === "id"
-                ? "en"
-                : "id";
-
-        applyLanguage(next);
-    }
-);
-
-
-/*
- * Mobile menu
- */
-function closeMobileMenu() {
-
-    mobileMenu.classList.remove("open");
+    mainNav.classList.add("open");
 
     menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
+      "aria-expanded",
+      "true"
     );
+  }
 
-    document.body.classList.remove(
-        "menu-open"
-    );
-}
-
-
-menuToggle.addEventListener(
-    "click",
-    () => {
-
-        const opened =
-            mobileMenu.classList.toggle(
-                "open"
-            );
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            String(opened)
-        );
-
-        document.body.classList.toggle(
-            "menu-open",
-            opened
-        );
+  function closeMenu() {
+    if (!mainNav || !menuToggle) {
+      return;
     }
-);
 
+    mainNav.classList.remove("open");
 
-document
-    .querySelectorAll(".mobile-menu a")
-    .forEach(link => {
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+  }
+
+  function toggleMenu() {
+    if (!mainNav || !menuToggle) {
+      return;
+    }
+
+    const isOpen =
+      mainNav.classList.contains("open");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  if (menuToggle && mainNav) {
+
+    menuToggle.addEventListener(
+      "click",
+      (event) => {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        toggleMenu();
+
+      }
+    );
+
+    mainNav
+      .querySelectorAll("a")
+      .forEach((link) => {
 
         link.addEventListener(
-            "click",
-            closeMobileMenu
+          "click",
+          () => {
+            closeMenu();
+          }
         );
+
+      });
+
+    /*
+     * Klik di luar menu mobile -> tutup.
+     */
+
+    document.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          !mainNav.classList.contains("open")
+        ) {
+          return;
+        }
+
+        const clickedInsideNav =
+          mainNav.contains(event.target);
+
+        const clickedToggle =
+          menuToggle.contains(event.target);
+
+        if (
+          !clickedInsideNav &&
+          !clickedToggle
+        ) {
+          closeMenu();
+        }
+
+      }
+    );
+
+  }
+
+  /*
+   * ESC -> tutup menu.
+   */
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+
+    }
+  );
+
+  /*
+   * Jika layar berubah dari mobile ke desktop,
+   * reset status menu.
+   */
+
+  window.addEventListener(
+    "resize",
+    () => {
+
+      if (window.innerWidth > 900) {
+        closeMenu();
+      }
+
+    }
+  );
+
+  /* =========================================
+     INTERNAL HASH NAVIGATION
+  ========================================= */
+
+  function scrollToHash(hash) {
+
+    if (!hash || hash === "#") {
+      return false;
+    }
+
+    const target =
+      document.querySelector(hash);
+
+    if (!target) {
+      return false;
+    }
+
+    /*
+     * History diperbarui tanpa reload halaman.
+     */
+
+    if (
+      window.location.hash !== hash
+    ) {
+
+      try {
+
+        history.pushState(
+          null,
+          "",
+          hash
+        );
+
+      } catch (error) {
+
+        /*
+         * Browser lama / WebView tertentu.
+         * Fallback tidak perlu melakukan apa-apa.
+         */
+
+      }
+
+    }
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    return true;
+  }
+
+  /*
+   * Tangani semua link #section.
+   */
+
+  document
+    .querySelectorAll('a[href^="#"]')
+    .forEach((link) => {
+
+      link.addEventListener(
+        "click",
+        (event) => {
+
+          const href =
+            link.getAttribute("href");
+
+          if (!href || href === "#") {
+            return;
+          }
+
+          const target =
+            document.querySelector(href);
+
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+
+          closeMenu();
+
+          scrollToHash(href);
+
+        }
+      );
 
     });
 
+  /*
+   * Jika halaman dibuka dengan:
+   *
+   * index.html#amplus
+   *
+   * tetapi elemen #amplus tidak ada,
+   * jangan biarkan browser terlihat "diam".
+   *
+   * Di index ini AM+ sebenarnya berupa
+   * file am-plus.html, bukan section #amplus.
+   */
 
-/*
- * Header scroll state
- */
-function updateHeader() {
+  window.addEventListener(
+    "hashchange",
+    () => {
 
-    if (window.scrollY > 30) {
-        siteHeader.classList.add("scrolled");
-    } else {
-        siteHeader.classList.remove("scrolled");
+      const hash =
+        window.location.hash;
+
+      if (!hash) {
+        return;
+      }
+
+      const target =
+        document.querySelector(hash);
+
+      if (target) {
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+
     }
-}
+  );
 
-window.addEventListener(
-    "scroll",
-    updateHeader,
-    {
-        passive: true
+  /* =========================================
+     ACTIVE NAVIGATION
+  ========================================= */
+
+  const navLinks = Array.from(
+    document.querySelectorAll(
+      '#mainNav a[href^="#"]'
+    )
+  );
+
+  const sectionTargets = navLinks
+    .map((link) => {
+
+      const hash =
+        link.getAttribute("href");
+
+      if (!hash || hash === "#") {
+        return null;
+      }
+
+      return document.querySelector(hash);
+
+    })
+    .filter(Boolean);
+
+  function setActiveNav(section) {
+
+    if (!section) {
+      return;
     }
-);
 
+    const id = section.id;
 
-/*
- * Reveal animation
- */
-const revealElements =
-    document.querySelectorAll(".reveal");
+    navLinks.forEach((link) => {
 
+      const isActive =
+        link.getAttribute("href") ===
+        `#${id}`;
 
-const revealObserver =
-    new IntersectionObserver(
-        entries => {
+      link.classList.toggle(
+        "active",
+        isActive
+      );
 
-            entries.forEach(entry => {
+    });
 
-                if (entry.isIntersecting) {
+  }
 
-                    entry.target.classList.add(
-                        "visible"
-                    );
+  if (
+    "IntersectionObserver" in window &&
+    sectionTargets.length > 0
+  ) {
 
-                    revealObserver.unobserve(
-                        entry.target
-                    );
-                }
+    const navObserver =
+      new IntersectionObserver(
+        (entries) => {
 
-            });
+          const visibleEntries =
+            entries
+              .filter(
+                (entry) =>
+                  entry.isIntersecting
+              )
+              .sort(
+                (a, b) =>
+                  b.intersectionRatio -
+                  a.intersectionRatio
+              );
+
+          if (
+            visibleEntries.length > 0
+          ) {
+
+            setActiveNav(
+              visibleEntries[0].target
+            );
+
+          }
 
         },
         {
-            threshold: 0.12
+          root: null,
+          rootMargin:
+            "-25% 0px -60% 0px",
+          threshold: [
+            0,
+            0.1,
+            0.25,
+            0.5
+          ]
         }
+      );
+
+    sectionTargets.forEach(
+      (section) => {
+        navObserver.observe(section);
+      }
     );
 
+  }
 
-revealElements.forEach(
-    element => revealObserver.observe(element)
-);
+  /* =========================================
+     REVEAL ANIMATION
+  ========================================= */
 
+  const reveals =
+    document.querySelectorAll(".reveal");
 
-/*
- * Close mobile menu when pressing Escape
- */
-document.addEventListener(
-    "keydown",
-    event => {
+  if (
+    "IntersectionObserver" in window &&
+    reveals.length > 0
+  ) {
 
-        if (event.key === "Escape") {
-            closeMobileMenu();
+    const revealObserver =
+      new IntersectionObserver(
+        (entries, observer) => {
+
+          entries.forEach((entry) => {
+
+            if (
+              !entry.isIntersecting
+            ) {
+              return;
+            }
+
+            entry.target.classList.add(
+              "visible"
+            );
+
+            observer.unobserve(
+              entry.target
+            );
+
+          });
+
+        },
+        {
+          threshold: 0.08,
+          rootMargin:
+            "0px 0px -30px 0px"
+        }
+      );
+
+    reveals.forEach((element) => {
+      revealObserver.observe(element);
+    });
+
+  } else {
+
+    /*
+     * Browser tanpa IntersectionObserver.
+     */
+
+    reveals.forEach((element) => {
+      element.classList.add("visible");
+    });
+
+  }
+
+  /* =========================================
+     LOCAL PAGE CHECK
+  ========================================= */
+
+  async function checkLocalPage(
+    filename
+  ) {
+
+    /*
+     * Untuk file lokal di WebView/SPCK,
+     * fetch() dapat dibatasi oleh browser.
+     *
+     * Karena itu kita tetap menyediakan
+     * fallback navigasi langsung.
+     */
+
+    try {
+
+      const response =
+        await fetch(
+          filename,
+          {
+            method: "HEAD",
+            cache: "no-store"
+          }
+        );
+
+      return response.ok;
+
+    } catch (error) {
+
+      /*
+       * Fetch terhadap file lokal dapat gagal
+       * meskipun file sebenarnya ada.
+       *
+       * Jangan menganggap otomatis file tidak ada.
+       */
+
+      return null;
+    }
+
+  }
+
+  function showSystemUpdating() {
+
+    /*
+     * Jangan menggunakan alert untuk setiap
+     * navigasi normal.
+     *
+     * Tetapi untuk file yang belum tersedia,
+     * alert memberi feedback yang jelas kepada user.
+     */
+
+    window.alert(
+      "Updating sistem..."
+    );
+
+  }
+
+  async function openLocalPage(
+    filename
+  ) {
+
+    if (!filename) {
+      return;
+    }
+
+    const result =
+      await checkLocalPage(filename);
+
+    /*
+     * File dipastikan tersedia.
+     */
+
+    if (result === true) {
+
+      window.location.href =
+        filename;
+
+      return;
+    }
+
+    /*
+     * Fetch gagal tetapi file mungkin
+     * sebenarnya tersedia di WebView lokal.
+     *
+     * Coba navigasi langsung.
+     *
+     * Ini penting untuk kompatibilitas SPCK.
+     */
+
+    if (result === null) {
+
+      window.location.href =
+        filename;
+
+      return;
+    }
+
+    /*
+     * HTTP 404 / file benar-benar tidak ada.
+     */
+
+    showSystemUpdating();
+
+  }
+
+  /* =========================================
+     LOCAL PAGE LINKS
+  ========================================= */
+
+  document
+    .querySelectorAll("a[href]")
+    .forEach((link) => {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) {
+        return;
+      }
+
+      /*
+       * Jangan ganggu:
+       *
+       * #anchor
+       * http
+       * https
+       * mailto
+       * tel
+       * javascript
+       */
+
+      if (
+        href.startsWith("#") ||
+        href.startsWith("http://") ||
+        href.startsWith("https://") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:") ||
+        href.startsWith("javascript:")
+      ) {
+        return;
+      }
+
+      /*
+       * Hanya proses halaman lokal
+       * yang memang sudah didefinisikan.
+       */
+
+      if (
+        !LOCAL_PAGES.includes(href)
+      ) {
+        return;
+      }
+
+      link.addEventListener(
+        "click",
+        async (event) => {
+
+          event.preventDefault();
+
+          closeMenu();
+
+          await openLocalPage(href);
+
+        }
+      );
+
+    });
+
+  /* =========================================
+     INTAKE FORM HELPERS
+  ========================================= */
+
+  function setFormStatus(
+    message,
+    type = "info"
+  ) {
+
+    if (!formStatus) {
+      return;
+    }
+
+    formStatus.textContent =
+      message;
+
+    formStatus.classList.remove(
+      "success",
+      "error",
+      "info"
+    );
+
+    formStatus.classList.add(
+      type
+    );
+
+  }
+
+  function normalizePhone(
+    value
+  ) {
+
+    return String(value || "")
+      .replace(/[^\d+]/g, "")
+      .trim();
+
+  }
+
+  function validateForm(data) {
+
+    if (!data.name) {
+      return "Nama wajib diisi.";
+    }
+
+    if (!data.business) {
+      return "Nama bisnis wajib diisi.";
+    }
+
+    if (!data.product_service) {
+      return "Produk / jasa wajib diisi.";
+    }
+
+    if (!data.need) {
+      return (
+        "Masalah / kebutuhan pemasaran wajib diisi."
+      );
+    }
+
+    const whatsapp =
+      normalizePhone(
+        data.whatsapp
+      );
+
+    if (!whatsapp) {
+      return (
+        "Nomor WhatsApp wajib diisi."
+      );
+    }
+
+    const digits =
+      whatsapp.replace(
+        /\D/g,
+        ""
+      );
+
+    if (digits.length < 9) {
+      return (
+        "Nomor WhatsApp tidak valid."
+      );
+    }
+
+    return null;
+
+  }
+
+  /* =========================================
+     FORM SUBMIT
+  ========================================= */
+
+  if (form) {
+
+    form.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+        const submitButton =
+          form.querySelector(
+            "button[type='submit']"
+          );
+
+        /*
+         * Ambil semua field dari form HTML.
+         */
+
+        const data =
+          Object.fromEntries(
+            new FormData(form).entries()
+          );
+
+        /*
+         * Source harus selalu dikontrol
+         * oleh aplikasi, bukan input user.
+         */
+
+        data.source =
+          "WEB_AM";
+
+        /*
+         * Validasi lokal.
+         */
+
+        const validationError =
+          validateForm(data);
+
+        if (validationError) {
+
+          setFormStatus(
+            validationError,
+            "error"
+          );
+
+          return;
         }
 
+        /*
+         * Endpoint harus tersedia.
+         *
+         * Jika kosong, jangan pura-pura berhasil.
+         */
+
+        if (!INTAKE_ENDPOINT) {
+
+          setFormStatus(
+            "Endpoint intake belum dikonfigurasi. Data belum dikirim.",
+            "info"
+          );
+
+          return;
+        }
+
+        if (submitButton) {
+
+          submitButton.disabled =
+            true;
+
+          submitButton.textContent =
+            "Mengirim...";
+
+        }
+
+        setFormStatus(
+          "Sedang mengirim informasi...",
+          "info"
+        );
+
+        try {
+
+          const response =
+            await fetch(
+              INTAKE_ENDPOINT,
+              {
+                method: "POST",
+
+                headers: {
+                  "Content-Type":
+                    "application/json",
+
+                  "Accept":
+                    "application/json"
+                },
+
+                body:
+                  JSON.stringify(data)
+              }
+            );
+
+          /*
+           * Backend harus memberikan
+           * HTTP 2xx untuk dianggap berhasil.
+           */
+
+          if (!response.ok) {
+
+            throw new Error(
+              `HTTP ${response.status}`
+            );
+
+          }
+
+          /*
+           * Coba membaca JSON response.
+           *
+           * Tidak menjadikan parsing JSON
+           * sebagai syarat utama keberhasilan,
+           * karena HTTP 2xx sudah menunjukkan
+           * request diterima server.
+           */
+
+          let result = null;
+
+          try {
+
+            result =
+              await response.json();
+
+          } catch (parseError) {
+
+            /*
+             * Response bukan JSON.
+             * Tidak fatal jika HTTP sudah 2xx.
+             */
+
+            result = null;
+
+          }
+
+          /*
+           * Sukses nyata dari backend.
+           */
+
+          form.reset();
+
+          setFormStatus(
+            "Terima kasih. Informasi Anda sudah diterima AUTO MARKETING.",
+            "success"
+          );
+
+          /*
+           * Diagnostic ringan untuk developer.
+           * Tidak mengganggu user.
+           */
+
+          if (result) {
+
+            console.info(
+              "WEB AM INTAKE SUCCESS:",
+              result
+            );
+
+          }
+
+        } catch (error) {
+
+          /*
+           * Diagnostic terlihat di browser console.
+           * Tidak menampilkan detail teknis
+           * kepada pengunjung.
+           */
+
+          console.error(
+            "WEB AM INTAKE ERROR:",
+            error
+          );
+
+          setFormStatus(
+            "Informasi belum berhasil dikirim. Periksa koneksi ke Central Backend atau hubungi AUTO MARKETING melalui WhatsApp.",
+            "error"
+          );
+
+        } finally {
+
+          if (submitButton) {
+
+            submitButton.disabled =
+              false;
+
+            submitButton.textContent =
+              "Kirim Informasi ke AUTO MARKETING";
+
+          }
+
+        }
+
+      }
+    );
+
+  }
+
+  /* =========================================
+     INITIAL HASH
+  ========================================= */
+
+  function handleInitialHash() {
+
+    const hash =
+      window.location.hash;
+
+    if (!hash) {
+      return;
     }
-);
 
+    const target =
+      document.querySelector(hash);
 
-/*
- * Initialize
- */
-applyLanguage(
-    getInitialLanguage()
-);
+    if (!target) {
+      return;
+    }
 
-updateHeader();
+    /*
+     * Beri waktu browser menyelesaikan layout
+     * sebelum scroll.
+     */
 
-if (currentYear) {
-    currentYear.textContent =
-        new Date().getFullYear();
-}
+    window.setTimeout(
+      () => {
+
+        target.scrollIntoView({
+          behavior: "auto",
+          block: "start"
+        });
+
+      },
+      50
+    );
+
+  }
+
+  handleInitialHash();
+
+})();
